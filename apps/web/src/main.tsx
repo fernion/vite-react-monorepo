@@ -4,12 +4,14 @@ import typescriptLogo from "/typescript.svg";
 import { Panel } from "@repo/ui/panel";
 
 import { createRoot } from "react-dom/client";
-import { AuthProvider } from "../../../packages/auth";
+import { AuthProvider, useAuth } from "@repo/auth";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 
 const App = () => {
+  const { userName } = useAuth();
+  console.log("useAuth on app", userName);
   return (
     <div>
       <a href="https://vitejs.dev" target="_blank">
@@ -22,7 +24,7 @@ const App = () => {
           alt="TypeScript logo"
         />
       </a>
-      <Panel></Panel>
+      <Panel />
     </div>
   );
 };
