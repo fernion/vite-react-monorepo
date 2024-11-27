@@ -1,8 +1,10 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/auth",
   "version": "0.0.0",
   "exports": {
-    "./panel": "./components/panel.tsx"
+    "./counter": "./components/counter.ts",
+    "./header": "./components/header.ts",
+    "./setup-counter": "./utils/counter.ts"
   },
   "license": "MIT",
   "scripts": {
@@ -10,8 +12,7 @@
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "@repo/auth": "workspace:*"
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@types/react": "18.3.12",
